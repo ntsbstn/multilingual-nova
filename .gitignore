@@ -6,3 +6,4 @@ composer.phar
 .phpunit.result.cache
 .DS_Store
 Thumbs.db
+/.history
