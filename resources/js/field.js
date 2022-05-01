@@ -14,7 +14,7 @@ import FormField from "./components/FormField.vue";
 import LanguageSelector from "./components/LanguageSelector.vue";
 import Tool from "./pages/Tool.vue";
 
-Nova.booting((app, router) => {
+Nova.booting((app, store) => {
   app.component("index-multilingual-nova", IndexField);
   app.component("detail-multilingual-nova", DetailField);
   app.component("form-multilingual-nova", FormField);
@@ -24,8 +24,5 @@ Nova.booting((app, router) => {
   if (lang) {
     Nova.request().defaults.headers["lang"] = lang;
   }
-});
-
-Nova.booting((app, store) => {
   Nova.inertia("MultilingualNova", Tool);
 });

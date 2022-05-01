@@ -52,6 +52,13 @@ class FieldServiceProvider extends PackageServiceProvider
             return;
         }
 
+        Nova::router(['nova', Authorize::class], 'multilingual-nova')
+            ->group(function ($router) {
+                $router->get('multilingual-nova', function ($request) {
+                    return inertia('MultilingualNova');
+                });
+            });
+
         Route::middleware(['nova', Authorize::class])
             ->prefix('nova-vendor/multilingual-nova')
             ->group(__DIR__ . '/../routes/api.php');
