@@ -11,7 +11,7 @@
 </template>
 
 <script>
-    import LanguageUI from "./LanguageUI";
+    import LanguageUI from "./LanguageUI.vue";
     import {global} from '../mixin/global'
 
     export default {

@@ -22,7 +22,7 @@
       <component
           v-if="removeModalOpen"
           class="text-left"
-          is="delete-resource-modal"
+          v-bind:is="delete-resource-modal"
           @confirm="confirmDelete"
           @close="closeRemoveModal"
       />

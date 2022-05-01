@@ -26,11 +26,6 @@
 </template>
 
 <script>
-
-    import {
-        Minimum
-    } from 'laravel-nova'
-
 export default {
 
     data: function () {
@@ -52,9 +47,7 @@ export default {
         },
 
         getCurrentLocal() {
-            return Minimum(
-                Nova.request().get('/nova-vendor/multilingual-nova/current-local')
-            )
+            return Nova.request().get('/nova-vendor/multilingual-nova/current-local')
                 .then(({ data }) => {
                     this.currentLocal = data
                     this.loading = false

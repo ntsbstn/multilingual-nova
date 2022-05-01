@@ -25,7 +25,6 @@ class NovaLanguageTool extends Tool
      */
     public function menu(Request $request)
     {
-        return view('nova-language-tool::navigation');
     }
 
     /**
