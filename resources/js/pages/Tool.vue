@@ -26,6 +26,8 @@
 </template>
 
 <script>
+import {default as Minimum} from 'Minimum'
+
 export default {
 
     data: function () {
@@ -47,7 +49,9 @@ export default {
         },
 
         getCurrentLocal() {
-            return Nova.request().get('/nova-vendor/multilingual-nova/current-local')
+            return Minimum(
+                Nova.request().get('/nova-vendor/multilingual-nova/current-local')
+            )
                 .then(({ data }) => {
                     this.currentLocal = data
                     this.loading = false
