@@ -28,11 +28,7 @@ class FieldServiceProvider extends PackageServiceProvider
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'nova-language-tool');
 
         $lang = request('lang', request()->header('lang'));
-        $requestUrl = parse_url(request()->header('referer'));
-        if(isset($requestUrl['query'])){
-            parse_str($requestUrl['query'], $params);
-            $lang = $params['lang'] ?? request()->language;
-        }
+        $lang = $lang ?? request()->language;
         
         if ($lang) {
             app()->setLocale($lang);
