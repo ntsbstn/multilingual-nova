@@ -33,8 +33,8 @@ export default {
     data: function () {
         return {
             initialLoading: true,
-            currentLocal: window.config.currentLocal,
-            locals: window.config.locals
+            currentLocal: window.Nova.appConfig.currentLocal,
+            locals: window.Nova.appConfig.locals
         }
     },
     methods: {

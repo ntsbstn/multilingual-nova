@@ -36,7 +36,7 @@ export default {
 
   data: function () {
     return {
-      selectedLocale: window.config.currentLocal,
+      selectedLocale: window.Nova.appConfig.currentLocal,
       removeModalOpen: false,
       deletedItem: null,
     };

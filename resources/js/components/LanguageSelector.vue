@@ -14,8 +14,8 @@ export default {
 
     data: function () {
         return {
-            currentLocal: window.config.currentLocal,
-            locals: window.config.locals
+            currentLocal: window.Nova.appConfig.currentLocal,
+            locals: window.Nova.appConfig.locals
         }
     },
     methods: {
